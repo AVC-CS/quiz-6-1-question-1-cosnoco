@@ -22,7 +22,7 @@ int PrimeNum(int num){
        return 0; // No return value, prime numbers start @ 2
     for (int i=2; i*i <= num; i++){
         if (num % i == 0)
-        return 0; // No return value
+            return 0; // No return value
     }
     return 1; //for prime number
 }
@@ -37,9 +37,7 @@ int getNextPrime(int begin){ // Find the closest next prime number to the given 
 
 int getPrevPrime(int end){ // Find the prime number which is closest to and less than the given parameter
     int prev = end - 1; // prime number < end
-    while (prev > 1 && is
-        
-        Prime(prev == 0){
+    while (prev > 1 && PrimeNum(prev) == 0){
         prev--;
     }
     return prev; // Return the prime number
