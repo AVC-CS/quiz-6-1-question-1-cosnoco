@@ -1,16 +1,16 @@
-void getTwoValues (int &begin, int &end;)
+#include <iostream>
+using namespace std;
 
+void getTwoValues (int &begin, int &end);
 int getNextPrime(int begin);
-
-int get PrevPrime(int end);
-
+int getPrevPrime(int end);
 int PrimeNum (int num);
 
 void getTwoValues(int &begin, int &end){ //*Assign two input values to the parameters
-
-do { //loop
+//loop
+do { 
     cout << "Enter two integers: "; // Ask for two integer values to User
-    cin >> begin << end; //*Assign two input values to the parameters
+    cin >> begin >> end; //*Assign two input values to the parameters
     if (begin >= end){ // The first input "begin" must be less than the second input "end"
        cout << " Invalid input; first input must be less than second input. Try again.\n";
     }
@@ -18,10 +18,10 @@ do { //loop
 }
 
 int PrimeNum(int num){
-    if(num <2)
-    return 0; // No return value, prime numbers start @ 2
+    if(num < 2)
+       return 0; // No return value, prime numbers start @ 2
     for (int i=2; i*i <= num; i++){
-        if (num + i == 0)
+        if (num % i == 0)
         return 0; // No return value
     }
     return 1; //for prime number
@@ -37,7 +37,9 @@ int getNextPrime(int begin){ // Find the closest next prime number to the given 
 
 int getPrevPrime(int end){ // Find the prime number which is closest to and less than the given parameter
     int prev = end - 1; // prime number < end
-    while (prev > 1 && isPrime(prev == 0){
+    while (prev > 1 && is
+        
+        Prime(prev == 0){
         prev--;
     }
     return prev; // Return the prime number
